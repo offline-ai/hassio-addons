@@ -1,0 +1,34 @@
+{
+  "name": "Offline TTS @LANG@",
+  "slug": "tts-@LANG@",
+  "version": "1.0.0",
+  "description": "local speech synthesis (@LANG@)",
+  "url": "https://github.com/offline-ai/hassio-addons/tts-@LANG@",
+  "startup": "application",
+  "arch": [
+    "aarch64",
+    "amd64"
+  ],
+  "boot": "auto",
+  "map": [
+    "share:rw"
+  ],
+  "options": {
+    "cache_dir": "",
+    "debug": false
+  },
+  "tmpfs": true,
+  "audio": true,
+  "ports": {
+    "59125/tcp": 59125
+  },
+  "ports_description": {
+    "59125/tcp": "Offline TTS web UI/API"
+  },
+  "schema": {
+    "cache_dir": "str",
+    "debug": "bool"
+  },
+  "homeassistant_api": false,
+  "webui": "http://[HOST]:[PORT:59125]/"
+}
