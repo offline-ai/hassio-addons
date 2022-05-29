@@ -17,13 +17,13 @@ for lang in 'en' 'zh'; do
 
     # Copy static files
     cp -f \
-       "${base_dir}/run.sh" \
-       "${repo_dir}/"
+        "${base_dir}/run.sh" \
+        "${repo_dir}/"
 
     # Copy dynamic files
     find "${base_dir}" -name '*.in' -type f -print0 | \
         parallel -0 -n1 \
-                 set_lang_version "${lang}" "${version}" {} "${repo_dir}/{/.}"
+                set_lang_version "${lang}" "${version}" {} "${repo_dir}/{/.}"
 
     # Create icon
     composite \

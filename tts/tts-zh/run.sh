@@ -25,7 +25,7 @@ if [[ -f "${CONFIG_PATH}" ]]; then
         TTS_ARGS+=('--debug')
     fi
 
-    echo "${TTS_ARGS[@]}"
+    echo "TTS_ARGS: ${TTS_ARGS[@]}"
 fi
 
 cd /home/tts/app

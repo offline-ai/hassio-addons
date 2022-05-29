@@ -101,4 +101,5 @@ eg,
 * [X] Espeak Chinese locale missing
 * [X] Show used languages only
 * [X] Can not use [SSML](#ssml) on HA
+* [X] Can not modify options on HA for the `/data/options.json` cannot read via common user.
 * [ ] Add preferred voice for language option
