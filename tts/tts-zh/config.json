@@ -3,7 +3,7 @@
   "slug": "tts-zh",
   "version": "1.0.0",
   "description": "local speech synthesis (zh)",
-  "url": "https://github.com/offline-ai/hassio-addons/tts-zh",
+  "url": "https://github.com/offline-ai/hassio-addons/tree/master/tts/tts-zh",
   "startup": "application",
   "arch": [
     "aarch64",

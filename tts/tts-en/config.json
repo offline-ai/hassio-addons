@@ -3,7 +3,7 @@
   "slug": "tts-en",
   "version": "1.0.0",
   "description": "local speech synthesis (en)",
-  "url": "https://github.com/offline-ai/hassio-addons/tts-en",
+  "url": "https://github.com/offline-ai/hassio-addons/tree/master/tts/tts-en",
   "startup": "application",
   "arch": [
     "aarch64",
