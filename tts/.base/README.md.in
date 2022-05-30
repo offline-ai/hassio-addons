@@ -88,7 +88,7 @@ eg,
 
 * [Coqui-TTS](http://coqui.ai/)
 * [ESpeaker](http://espeak.sourceforge.net)
-* Main Inspired by [Synesthesiam's OpenTTS](https://github.com/synesthesiam/opentts).
+* Main Inspired by [OpenTTS](https://github.com/synesthesiam/opentts).
   * Great Thanks. Without [OpenTTS](https://github.com/synesthesiam/opentts) there would be no Offline TTS.
 
 ## TODO
