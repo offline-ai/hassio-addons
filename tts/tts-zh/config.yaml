@@ -1,6 +1,6 @@
 name: Offline TTS zh
 slug: tts-zh
-version: 1.0.0
+version: "1.0.1"
 description: local speech synthesis (zh)
 url: https://github.com/offline-ai/hassio-addons/tree/master/tts/tts-zh
 startup: application

@@ -1,6 +1,6 @@
 name: Offline TTS @LANG@
 slug: tts-@LANG@
-version: 1.0.0
+version: "@VERSION@"
 description: local speech synthesis (@LANG@)
 url: https://github.com/offline-ai/hassio-addons/tree/master/tts/tts-@LANG@
 startup: application

@@ -10,10 +10,12 @@ function set_lang_version {
 
 export -f set_lang_version
 
-version='1.0.0'
-for lang in 'en' 'zh'; do
-    repo_dir="${this_dir}/tts-${lang}"
+version='1.0.1'
+
+function generate() {
+    repo_dir="${this_dir}/tts-$1"
     mkdir -p "${repo_dir}"
+    IFS='_' read -ra lang <<< "$1"
 
     # Copy static files
     cp -f \
@@ -23,7 +25,7 @@ for lang in 'en' 'zh'; do
     # Copy dynamic files
     find "${base_dir}" -name '*.in' -type f -print0 | \
         parallel -0 -n1 \
-                set_lang_version "${lang}" "${version}" {} "${repo_dir}/{/.}"
+                set_lang_version "$1" "${version}" {} "${repo_dir}/{/.}"
 
     # Create icon
     composite \
@@ -38,4 +40,14 @@ for lang in 'en' 'zh'; do
         "${base_dir}/flags/${lang}_large.png" \
         "${base_dir}/logo.png" \
         "${repo_dir}/logo.png"
+
+    convert -font Yrsa-Bold \
+        -fill black \
+        -pointsize 56 \
+        -gravity southwest \
+        -draw "text 10,0 '${lang}'" "${repo_dir}/logo.png" "${repo_dir}/logo.png"
+}
+
+for lang in 'en' 'zh' 'en_lite' 'zh_lite'; do
+    generate $lang
 done
