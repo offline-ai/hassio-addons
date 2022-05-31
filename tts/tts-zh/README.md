@@ -80,7 +80,7 @@ eg,
 ```xml
 <speak>
   <s lang="zh">欢迎使用离线语音合成</s>
-  <s lang="en">Welcome to Offline Speech Synthesis.</s>
+  <s lang="en-us">Welcome to Offline Speech Synthesis.</s>
 </speak>
 ```
 
