@@ -10,7 +10,7 @@ function set_lang_version {
 
 export -f set_lang_version
 
-version='1.0.1'
+version=`sed -nE "s/version:\s*(\S+)/\1/p" .cz.yaml`
 
 function generate() {
     repo_dir="${this_dir}/tts-$1"
@@ -20,6 +20,14 @@ function generate() {
     # Copy static files
     cp -f \
         "${base_dir}/run.sh" \
+        "${repo_dir}/"
+
+    cp -rf \
+        "${base_dir}/translations" \
+        "${repo_dir}/"
+
+    cp -f \
+        "${this_dir}/CHANGELOG.md" \
         "${repo_dir}/"
 
     # Copy dynamic files
