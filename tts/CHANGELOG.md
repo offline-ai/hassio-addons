@@ -1,5 +1,9 @@
 ## Unreleased
 
+### Fix
+
+- Can not return voices on MaryTTS-compatible "/voices" endpoint
+
 ### Feat
 
 - add zh translation
