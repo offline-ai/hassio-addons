@@ -1,0 +1,9 @@
+configuration:
+  cache_dir:
+    name: Cache Directory
+    description: Directory to cache generated WAV files, Leave empty to disable (default, HA already has a TTS cache)
+  debug:
+    name: Debug
+    description: Enable debug log
+network:
+  59125/tcp: Offline TTS web UI/API

@@ -1,0 +1,9 @@
+configuration:
+  cache_dir:
+    name: 緩存目錄
+    description: 用戶指定的語音緩存目錄來代替係統指定的臨時緩存目錄
+  debug:
+    name: 調試
+    description: 是否啓用調試日誌
+network:
+  59125/tcp: 離線語音合成TTS Web/API 端口
