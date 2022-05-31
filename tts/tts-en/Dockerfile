@@ -1,4 +1,4 @@
-FROM riceball/tts:en-1.0.1
+FROM riceball/tts:en-1.1.0
 LABEL maintainer="Riceball LEE <snowyu.lee@gmail.com>"
 
 ENV LANG C.UTF-8

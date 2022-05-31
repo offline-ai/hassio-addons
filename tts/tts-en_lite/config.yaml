@@ -1,6 +1,6 @@
 name: Offline TTS en_lite
 slug: tts-en_lite
-version: "1.0.1"
+version: "1.1.0"
 description: local speech synthesis (en_lite)
 url: https://github.com/offline-ai/hassio-addons/tree/master/tts/tts-en_lite
 startup: application
