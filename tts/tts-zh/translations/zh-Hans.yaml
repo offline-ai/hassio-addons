@@ -5,5 +5,13 @@ configuration:
   debug:
     name: 调试
     description: 是否启用调试日志
+  preferred_voices:
+    name: 首选声音
+    description: >
+      指定语言的首选声音, 如:
+      - lang: en
+        voice: en_vctk
+      - lang: "zh"
+        voice: "tts:zh_baker"
 network:
   59125/tcp: 离线语音合成TTS Web/API 端口

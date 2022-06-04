@@ -10,6 +10,16 @@
 * `debug`
     * If true, DEBUG messages are printed to the log
     * Default is false
+* `preferred_voices`
+    * Preferred voice list for language with [SSML](#ssml), the item:
+
+    ```yaml
+    preferred_voices:
+      - lang: "zh"
+        voice: "tts:zh_baker"
+      - lang: "en"
+        voice: "tts:en_vctk"
+    ```
 
 ## Compatible with MaryTTS
 

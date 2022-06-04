@@ -1,3 +1,9 @@
+## v1.2.0 (2022-06-05)
+
+### Feat
+
+- add preferred_voices option
+
 ## v1.1.0 (2022-05-31)
 
 ### Fix

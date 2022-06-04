@@ -5,5 +5,13 @@ configuration:
   debug:
     name: Debug
     description: Enable debug log
+  preferred_voices:
+    name: Preferred Voices
+    description: >
+      Preferred voice for language with SSML
+      - lang: en
+        voice: en_vctk
+      - lang: "zh"
+        voice: "tts:zh_baker"
 network:
   59125/tcp: Offline TTS web UI/API

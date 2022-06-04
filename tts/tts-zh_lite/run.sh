@@ -25,6 +25,10 @@ if [[ -f "${CONFIG_PATH}" ]]; then
         TTS_ARGS+=('--debug')
     fi
 
+    preferred_voices="$(jq 'preferred_voices' "${CONFIG_PATH}")"
+    if [ preferred_voices != "[]" ]; then
+        cat $preferred_voices > /home/tts/app/PREFERRED_VOICES
+    fi
     echo "TTS_ARGS: ${TTS_ARGS[@]}"
 fi
 

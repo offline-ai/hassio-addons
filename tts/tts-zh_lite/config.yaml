@@ -1,6 +1,6 @@
 name: Offline TTS zh_lite
 slug: tts-zh_lite
-version: "1.1.0"
+version: "1.2.0"
 description: local speech synthesis (zh_lite)
 url: https://github.com/offline-ai/hassio-addons/tree/master/tts/tts-zh_lite
 startup: application
@@ -13,6 +13,7 @@ map:
 options:
   cache_dir: ''
   debug: false
+  preferred_voices: []
 tmpfs: true
 audio: true
 ports:
@@ -22,5 +23,8 @@ ports_description:
 schema:
   cache_dir: str
   debug: bool
+  preferred_voices:
+    - lang: list(zh|en)
+      voice: str
 homeassistant_api: false
 webui: http://[HOST]:[PORT:59125]/
