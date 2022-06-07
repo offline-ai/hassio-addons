@@ -1,6 +1,6 @@
 name: Offline TTS en
 slug: tts-en
-version: "1.2.0"
+version: "1.2.1"
 description: local speech synthesis (en)
 url: https://github.com/offline-ai/hassio-addons/tree/master/tts/tts-en
 startup: application

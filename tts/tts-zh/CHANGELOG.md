@@ -1,3 +1,9 @@
+## v1.2.1 (2022-06-07)
+
+### Fix
+
+- use log_level option instead of debug now
+
 ## v1.2.0 (2022-06-05)
 
 ### Feat
