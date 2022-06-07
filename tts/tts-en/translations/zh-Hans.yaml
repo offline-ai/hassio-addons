@@ -2,9 +2,9 @@ configuration:
   cache_dir:
     name: 缓存目录
     description: 用户指定的语音缓存目录来代替系统指定的临时缓存目录
-  debug:
-    name: 调试
-    description: 是否启用调试日志
+  log_level:
+    name: 错误日志级别
+    description: 控制本附加错误日志显示的级别
   preferred_voices:
     name: 首选声音
     description: >

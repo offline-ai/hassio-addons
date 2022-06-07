@@ -7,9 +7,9 @@
 * `cache_dir`
     * Directory to cache generated WAV files
     * Leave empty to disable (default, HA already has a TTS cache)
-* `debug`
-    * If true, DEBUG messages are printed to the log
-    * Default is false
+* `log_level`
+    * Controls the level of log details the add-on provides.
+    * Default is `info`
 * `preferred_voices`
     * Preferred voice list for language with [SSML](#ssml), the item:
 

@@ -12,7 +12,7 @@ map:
   - share:rw
 options:
   cache_dir: ''
-  debug: false
+  log_level: 'info'
   preferred_voices: []
 tmpfs: true
 audio: true
@@ -22,7 +22,7 @@ ports_description:
   59125/tcp: Offline TTS web UI/API
 schema:
   cache_dir: str
-  debug: bool
+  log_level: list(debug|info|warning|error|fatal)?
   preferred_voices:
     - lang: list(zh|en)
       voice: str

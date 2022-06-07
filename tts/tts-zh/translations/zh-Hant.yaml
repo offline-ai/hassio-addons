@@ -2,9 +2,9 @@ configuration:
   cache_dir:
     name: 緩存目錄
     description: 用戶指定的語音緩存目錄來代替係統指定的臨時緩存目錄
-  debug:
-    name: 調試
-    description: 是否啓用調試日誌
+  log_level:
+    name: 錯誤日誌級別
+    description: 控製本附加錯誤日誌顯示的級別
   preferred_voices:
     name: 首選聲音
     description: >

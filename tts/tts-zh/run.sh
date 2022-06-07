@@ -19,17 +19,19 @@ if [[ -f "${CONFIG_PATH}" ]]; then
         TTS_ARGS+=('--cache' "${cache_dir}")
     fi
 
-    # If true, print DEBUG messages to log
-    debug="$(jq 'debug' "${CONFIG_PATH}")"
-    if [[ "${debug}" == 'True' ]]; then
-        TTS_ARGS+=('--debug')
+    log_level="$(jq 'log_level' "${CONFIG_PATH}")"
+    if [[ -n "${log_level}" ]]; then
+        TTS_ARGS+=('--log' "${log_level}")
     fi
 
-    preferred_voices="$(jq 'preferred_voices' "${CONFIG_PATH}")"
+    preferred_voices="$(jq 'preferred_voices' "${CONFIG_PATH}" | sed "s/'/\"/g")"
     if [ preferred_voices != "[]" ]; then
-        cat $preferred_voices > /home/tts/app/PREFERRED_VOICES
+        echo "$preferred_voices" > /home/tts/app/PREFERRED_VOICES
     fi
-    echo "TTS_ARGS: ${TTS_ARGS[@]}"
+
+    if [[  $log_level == "debug" ]]; then
+        echo "${TTS_ARGS[@]}"
+    fi
 fi
 
 cd /home/tts/app
